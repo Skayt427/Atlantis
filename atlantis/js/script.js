@@ -110,6 +110,18 @@ document.addEventListener("DOMContentLoaded", function () {
     delay: 1,
   });
 
+  gsap.from('.anim-banner-next-section', {
+    scrollTrigger: {
+      trigger: '.banner',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    delay: 2,
+    y: 100,
+    opacity: 0,
+  });
+
+
   // history
   gsap.from('.anim-history-line', {
     scrollTrigger: {

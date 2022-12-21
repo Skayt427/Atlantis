@@ -195,6 +195,10 @@
   text-transform: uppercase;
 
   span {
+    display: inline-block;
+  }
+
+  div {
     position: relative;
 
     &::after,
@@ -224,7 +228,7 @@
   }
 
   &:hover {
-    span {
+    div {
 
       &::before,
       &::after {

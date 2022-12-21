@@ -389,11 +389,15 @@ body {
 }
 
 .banner__next span {
+  display: inline-block;
+}
+
+.banner__next div {
   position: relative;
 }
 
-.banner__next span::after,
-.banner__next span::before {
+.banner__next div::after,
+.banner__next div::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -409,20 +413,20 @@ body {
   transition: all linear 1s;
 }
 
-.banner__next span::before {
+.banner__next div::before {
   z-index: -1;
   width: 153px;
   height: 153px;
 }
 
-.banner__next span::after {
+.banner__next div::after {
   z-index: -2;
   width: 179px;
   height: 179px;
 }
 
-.banner__next:hover span::before,
-.banner__next:hover span::after {
+.banner__next:hover div::before,
+.banner__next:hover div::after {
   -webkit-transform: translate(-50%, -50%) scale(1.2);
       -ms-transform: translate(-50%, -50%) scale(1.2);
           transform: translate(-50%, -50%) scale(1.2);
