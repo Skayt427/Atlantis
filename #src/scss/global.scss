@@ -1,0 +1,157 @@
+$font-main: 'Montserrat', sans-serif;
+$color-white: #fff;
+$color-blue: #0053ed;
+$color-black: #000;
+$color-black-custom: #1a1a1a;
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  outline: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.content {
+  flex: 1 0 auto;
+  position: relative;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+body {
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+  color: $color-black;
+}
+
+.container {
+  max-width: 1174px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container-full {
+  padding: 32px 50px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+  .container-full {
+    padding: 32px 15px 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .history__title {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-full {
+    padding: 0;
+  }
+}
+
+
+// Анимации
+.anim-scale-circle {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    z-index: -2;
+    transform: translateY(-50%);
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: $color-blue;
+    border-radius: 50%;
+    opacity: 0.4;
+    transition: all linear 1s;
+  }
+
+  &:hover {
+
+    &::before {
+      transform: translateY(-50%) scale(1.6);
+    }
+  }
+}
+
+.anim-scale-two-circle {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -2;
+    transform: translate(-50%, -50%);
+    content: '';
+    display: block;
+    width: 44px;
+    height: 44px;
+    background-color: $color-blue;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: all linear 1s;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-color: $color-blue;
+    border-radius: 50%;
+    transition: all linear 1s;
+  }
+
+  &:hover {
+
+    &::before,
+    &::after {
+      transform: translate(-50%, -50%) scale(2.6);
+    }
+  }
+}
