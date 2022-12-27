@@ -18,63 +18,52 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  let infoHover = document.querySelectorAll('.js-info-item');
+
+  if (infoHover.length) {
+    infoHover.forEach(infoItem => {
+      let infoWrapper = infoItem.closest('.info');
+      infoItem.addEventListener('mouseover', function () {
+        infoWrapper.classList.add('hover');
+      });
+      infoItem.addEventListener('mouseout', function () {
+        infoWrapper.classList.remove('hover');
+      });
+    });
+  };
+
   // Анимации
   gsap.registerPlugin(ScrollTrigger);
 
   // header
-  gsap.from('.anim-rotate-scale', {
+  gsap.from('.anim-opacity', {
     scrollTrigger: {
-      trigger: '.anim-rotate-scale',
+      trigger: '.anim-opacity',
       toggleActions: 'play pause resume none',
     },
-    duration: 2,
-    rotation: -60,
-    scale: 0,
+    duration: 1,
+    delay: 0.5,
+    opacity: 0,
   });
 
-  gsap.from('.anim-banner__line', {
+  gsap.from('.swiper-slide-active .anim-banner-title', {
     scrollTrigger: {
       trigger: '.banner',
       toggleActions: 'play pause resume none',
     },
-    duration: 2,
-    rotation: -30,
-    y: -200,
-
-  });
-
-  gsap.from('.anim-translate-bottom', {
-    scrollTrigger: {
-      trigger: '.anim-translate-bottom',
-      toggleActions: 'play pause resume none',
-    },
-    duration: 2,
-    y: 100,
-    opacity: 0,
-  });
-
-  gsap.from('.anim-translate-bottom-delay', {
-    scrollTrigger: {
-      trigger: '.anim-translate-bottom-delay',
-      toggleActions: 'play pause resume none',
-    },
-    duration: 2,
-    y: 100,
-    opacity: 0,
-    stagger: 1,
-    delay: 1,
+    duration: 1,
+    x: -2000,
   });
 
   // banner
-  gsap.from('.anim-banner__text', {
+  gsap.from('.anim-banner-translate', {
     scrollTrigger: {
       trigger: '.banner',
       toggleActions: 'play pause resume none',
     },
-    duration: 2,
-    y: 100,
+    duration: 1,
+    y: 300,
     opacity: 0,
-    delay: 1,
   });
 
   gsap.from('.anim-banner-prev', {
@@ -82,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: '.banner',
       toggleActions: 'play pause resume none',
     },
-    duration: 2,
+    duration: 1,
     delay: 1,
     x: 50,
     opacity: 0,
@@ -93,34 +82,31 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: '.banner',
       toggleActions: 'play pause resume none',
     },
-    duration: 2,
+    duration: 1,
     delay: 1,
     x: -50,
     opacity: 0,
   });
 
-  gsap.from('.anim-banner__link', {
+  // info
+  gsap.from('.anim-info-bg', {
     scrollTrigger: {
-      trigger: '.banner',
+      trigger: '.anim-info-bg',
       toggleActions: 'play pause resume none',
     },
-    duration: 2,
-    y: 100,
-    opacity: 0,
-    delay: 1,
+    duration: 4,
+    backgroundSize: '120%',
   });
 
-  gsap.from('.anim-banner-next-section', {
+  gsap.from('.anim-info__title', {
     scrollTrigger: {
-      trigger: '.banner',
+      trigger: '.anim-info__title',
       toggleActions: 'play pause resume none',
     },
     duration: 1,
-    delay: 2,
-    y: 100,
+    delay: 0.5,
     opacity: 0,
   });
-
 
   // history
   gsap.from('.anim-history-line', {
@@ -128,9 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: '.history',
       toggleActions: 'play pause resume none',
     },
-    duration: 2,
-    y: -100,
-    rotation: -35,
+    duration: 1,
+    x: -2000,
   });
 
   gsap.from('.anim-history-img', {
@@ -150,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
       start: 'center bottom',
     },
     duration: 1,
-    delay: 2,
+    delay: 1,
     y: 100,
     opacity: 0,
   });
@@ -165,16 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
     clipPath: 'inset(0 50% 0 50%)',
   });
 
-  gsap.from('.anim-centered-name', {
-    scrollTrigger: {
-      trigger: '.centered_one',
-      toggleActions: 'play pause resume none',
-    },
-    duration: 1,
-    y: -100,
-    rotation: -35,
-  });
-
   gsap.from('.anim-centered-blur-bg', {
     scrollTrigger: {
       trigger: '.centered_one',
@@ -185,13 +160,22 @@ document.addEventListener("DOMContentLoaded", function () {
     filter: 'blur(40px)',
   });
 
+  gsap.from('.anim-centered-left', {
+    scrollTrigger: {
+      trigger: '.centered_one',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    x: -2000,
+  });
+
   gsap.from('.anim-centered-top', {
     scrollTrigger: {
       trigger: '.centered_one',
       toggleActions: 'play pause resume none',
     },
     duration: 1,
-    delay: 1,
+    delay: 0.5,
     y: 100,
     opacity: 0,
   });
@@ -202,19 +186,33 @@ document.addEventListener("DOMContentLoaded", function () {
   if (animStatisticsImg.length && window.innerWidth >= 760) {
     animStatisticsImg.forEach(img => {
       let parent = img.closest('.anim-statistics-item');
-      let title = parent.querySelector('.anim-statistics-title');
+      let titleLeft = parent.querySelector('.anim-statistics-title-left');
+      let titleRight = parent.querySelector('.anim-statistics-title-right');
       let description = parent.querySelector('.anim-statistics-description');
 
-      gsap.from(title, {
-        scrollTrigger: {
-          trigger: parent,
-          toggleActions: 'play pause resume none',
-          start: 'center bottom',
-        },
-        duration: 2,
-        y: -100,
-        rotation: -35,
-      });
+      if (titleLeft) {
+        gsap.from(titleLeft, {
+          scrollTrigger: {
+            trigger: parent,
+            toggleActions: 'play pause resume none',
+            start: 'center bottom',
+          },
+          duration: 1,
+          x: -2000,
+        });
+      };
+
+      if (titleRight) {
+        gsap.from(titleRight, {
+          scrollTrigger: {
+            trigger: parent,
+            toggleActions: 'play pause resume none',
+            start: 'center bottom',
+          },
+          duration: 1,
+          x: 2000,
+        });
+      };
 
       gsap.from(description, {
         scrollTrigger: {
@@ -223,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
           start: 'center bottom',
         },
         duration: 1,
-        delay: 2,
+        delay: 0.5,
         opacity: 0,
         y: 100,
       });
@@ -240,25 +238,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  // info
-  gsap.from('.anim-info-bg', {
-    scrollTrigger: {
-      trigger: '.anim-info-bg',
-      toggleActions: 'play pause resume none',
-    },
-    duration: 4,
-    backgroundSize: '120%',
-  });
-
-  gsap.from('.anim-info__title', {
-    scrollTrigger: {
-      trigger: '.anim-info__title',
-      toggleActions: 'play pause resume none',
-    },
-    duration: 1,
-    y: 100,
-  });
-
   // centered_two
   gsap.from('.anim-blur-bg-wrap', {
     scrollTrigger: {
@@ -269,14 +248,13 @@ document.addEventListener("DOMContentLoaded", function () {
     clipPath: 'inset(0 50% 0 50%)',
   });
 
-
   gsap.from('.anim-blur-bg', {
     scrollTrigger: {
       trigger: '.centered_two',
       toggleActions: 'play pause resume none',
     },
     duration: 1,
-    delay: 3,
+    delay: 2,
     filter: 'blur(40px)',
   });
 
@@ -285,18 +263,18 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: '.centered_two',
       toggleActions: 'play pause resume none',
     },
-    duration: 2,
-    rotation: -35,
+    duration: 1,
+    delay: 0.5,
+    x: -2000,
   });
 
-  gsap.from('.anim-centered-translate', {
+  gsap.from('.anim-centered-opacity', {
     scrollTrigger: {
       trigger: '.centered_two',
       toggleActions: 'play pause resume none',
     },
-    duration: 2,
-    delay: 2,
-    y: 100,
+    duration: 1,
+    delay: 1,
     opacity: 0,
   });
 
@@ -306,9 +284,8 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: '.companions',
       toggleActions: 'play pause resume none',
     },
-    duration: 2,
-    rotation: -35,
-    y: -140,
+    duration: 1,
+    x: -2000,
   });
 
   gsap.from('.anim-companions-img', {
@@ -316,33 +293,8 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: '.companions',
       toggleActions: 'play pause resume none',
     },
-    duration: 2,
-    delay: 1,
-    scaleX: 0,
-  });
-
-  // footer
-  // if (window.innerWidth >= 760) {
-  gsap.from('.anim-footer-translate', {
-    scrollTrigger: {
-      trigger: '.footer',
-      toggleActions: 'play pause resume none',
-    },
-    duration: 2,
-    delay: 2,
-    y: 100,
-    opacity: 0,
-  });
-  // };
-
-  gsap.from('.anim-footer-logo', {
-    scrollTrigger: {
-      trigger: '.footer',
-      toggleActions: 'play pause resume none',
-    },
     duration: 1,
-    delay: 1,
-    rotation: -60,
-    scale: 0,
+    delay: 0.5,
+    opacity: 0,
   });
 });

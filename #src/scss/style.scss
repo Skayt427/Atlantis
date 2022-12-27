@@ -257,7 +257,10 @@
 
 @media (max-width: 991px) {
   .banner__next {
-    display: none;
+    top: 160px;
+    bottom: unset;
+    right: 50%;
+    transform: translateX(50%);
   }
 
   .banner__title,
@@ -312,6 +315,41 @@
     align-items: flex-start;
     margin: 24px 0 0;
   }
+
+  .banner__next {
+    position: static;
+    transform: unset;
+    order: 2;
+    line-height: 16px;
+    font-size: 12px;
+    padding: 100px 0 60px;
+
+    div::before {
+      width: 90px;
+      height: 90px;
+    }
+
+    div::after {
+      width: 140px;
+      height: 140px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .banner__next {
+    padding: 30px 0 0px;
+
+    div::before {
+      width: 60px;
+      height: 60px;
+    }
+
+    div::after {
+      width: 80px;
+      height: 80px;
+    }
+  }
 }
 
 .info {
@@ -319,8 +357,28 @@
   position: relative;
   z-index: 3;
   min-height: 100vh;
+  margin-top: 20px;
   background-position: center;
   background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition: all linear 1s;
+    opacity: 0;
+  }
+
+  &.hover {
+    &::before {
+      opacity: 0.7;
+    }
+  }
 
   &.anim-info-bg {
     background-size: 100%;
@@ -337,7 +395,7 @@
     gap: 8px;
     width: fit-content;
     margin-left: auto;
-    padding-top: 20%;
+    padding-top: 17%;
   }
 
   &__title-line {
@@ -357,14 +415,21 @@
 
   &__item {
     position: absolute;
-    z-index: 2;
+    // z-index: 2;
 
     svg {
+      position: relative;
+      z-index: -1;
       background-color: $color-blue;
       border-radius: 50%;
+      transition: all linear 0.2s;
     }
 
     &:hover {
+      svg {
+        transform: rotate(180deg);
+      }
+
       .info__wrapper {
         display: block;
       }
@@ -422,14 +487,15 @@
 
   &__img {
     max-width: 200px;
-    height: 160px;
+    height: 120px;
   }
 
-  &__title {
+  &__subtitle {
     margin-top: 10px;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 14px;
+    line-height: 16px;
   }
 
   &__text {
@@ -510,9 +576,10 @@
     height: 80px;
   }
 
-  .info__title {
+  .info__subtitle {
     margin-top: 8px;
     font-size: 12px;
+    line-height: 14px;
   }
 
   .info__link {
@@ -879,7 +946,7 @@
   }
 
   .centered__block {
-    padding: 16px;
+    padding: 30px;
   }
 
   .centered_two .centered__title {
@@ -920,10 +987,6 @@
     width: 100%;
     max-width: unset;
     padding: 32px;
-
-    &+.centered__box {
-      margin-top: 80px;
-    }
   }
 
   .centered__text {
@@ -944,10 +1007,7 @@
   }
 }
 
-@media (max-width: 768px) {
-  .centered__box+.centered__box {
-    margin-top: 0;
-  }
+@media (max-width: 767px) {
 
   .centered__item {
     flex-direction: column;
@@ -973,6 +1033,10 @@
     font-size: 16px;
     line-height: 20px;
   }
+
+  .centered__block {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -995,11 +1059,18 @@
 
 .statistics {
 
-  // display: grid;
-  // grid-template-columns: repeat(2, 1fr);
   &__item {
     display: flex;
     height: 650px;
+
+    &:nth-of-type(even) {
+      .statistics-circle {
+        top: unset;
+        bottom: 50%;
+        left: unset;
+        right: -50%;
+      }
+    }
   }
 
   &__box {
@@ -1010,6 +1081,7 @@
 
     &_text {
       padding: 60px;
+      height: 100%;
       width: 50%;
     }
 
@@ -1018,7 +1090,10 @@
       text-align: right;
     }
 
-    &_img {}
+    &_img {
+      position: relative;
+      overflow: hidden;
+    }
   }
 
   &__title {
@@ -1075,7 +1150,6 @@
 
 @media (max-width: 991px) {
   .statistics__box_text {
-    height: 250px;
     padding: 16px;
   }
 
@@ -1117,6 +1191,11 @@
 }
 
 @media (max-width: 760px) {
+
+  .statistics-circle {
+    display: none;
+  }
+
   .statistics__item {
     flex-direction: column;
   }
@@ -1140,7 +1219,7 @@
 .companions {
   padding-top: 32px;
   padding-bottom: 32px;
-  overflow: hidden;
+  // overflow: hidden;
 
   &__title {
     display: flex;
@@ -1281,7 +1360,7 @@
   }
 
   &__copy {
-    margin-top: 32px;
+    margin-top: 42px;
     color: #ffffff;
     font-size: 10px;
     line-height: 16px;

@@ -17,15 +17,15 @@
   <div class="wrapper">
     <div class="content">
       <header class="header container">
-        <a href="" class="logo header__logo anim-rotate-scale">
+        <a href="" class="logo header__logo anim-opacity">
           <img src="img/logo.svg" class="logo__img" alt="atlantis">
         </a>
 
         <nav class="header__wrapper">
           <ul class="menu">
             <li class="menu__item"><a href="/" class="menu__link">Каталог</a></li>
-            <li class="menu__item anim-translate-bottom-delay"><a href="/" class="menu__link">Вакансии</a></li>
-            <li class="menu__item anim-translate-bottom-delay"><a href="/" class="menu__link">Контакты</a></li>
+            <li class="menu__item"><a href="/" class="menu__link">Вакансии</a></li>
+            <li class="menu__item"><a href="/" class="menu__link">Контакты</a></li>
           </ul>
         </nav>
       </header>
@@ -53,14 +53,14 @@
       <div class="swiper js-slider-banner-content">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <h1 class="banner__title">
-              <div class="banner__line anim-banner__line">ИСКУССТВО</div>
-              <div class="banner__line anim-banner__line">СОЗДАВАТЬ -</div>
-              <div class="banner__line anim-banner__line">ЭТО ВОЗМОЖНО</div>
-              <div class="banner__line anim-banner__line">С ГК «АТЛАНТИС»</div>
+            <h1 class="banner__title anim-banner-title">
+              <div class="banner__line">ИСКУССТВО</div>
+              <div class="banner__line">СОЗДАВАТЬ -</div>
+              <div class="banner__line">ЭТО ВОЗМОЖНО</div>
+              <div class="banner__line">С ГК «АТЛАНТИС»</div>
             </h1>
 
-            <div class="banner__text anim-banner__text">
+            <div class="banner__text anim-banner-translate">
               Ассортимент не в полной мере отвечает вашим потребностям?
               <br>
               Эксклюзивно изготовим на заказ и в любом объеме вашу продукцию!
@@ -81,10 +81,10 @@
       </div>
     </div>
 
-    <div class="banner__bottom">
+    <div class="banner__bottom anim-banner-translate">
       <a href="#info" class="banner__next">
         <div>
-          <span class="anim-banner-next-section">
+          <span>
             СТРУКТУРА ПРОИЗВОДСТВА
           </span>
         </div>
@@ -94,7 +94,7 @@
         </svg>
       </a>
 
-      <a href="/" class="banner__link anim-scale-two-circle"><span class="anim-banner__link">Перейти в каталог</span></a>
+      <a href="/" class="banner__link anim-scale-two-circle"><span>Перейти в каталог</span></a>
 
       <div class="banner__nav">
         <button type="button" class="banner__btn banner__btn_prev js-banner__btn_prev anim-scale-circle">
@@ -116,20 +116,20 @@
 
 <section class="info anim-info-bg" id="info" style="background-image: url('img/info.png');">
   <div class="info__content container">
-    <div class="info__title">
+    <div class="info__title anim-info__title">
       <div class="info__title-line">
-        <span class="anim-info__title">
+        <span>
           СТРУКТУРа
         </span>
       </div>
       <div class="info__title-line">
-        <span class="anim-info__title">
+        <span>
           ПРОИЗВОДСТВА
         </span>
       </div>
     </div>
 
-    <div class="info__item info__item_1">
+    <div class="info__item info__item_1 js-info-item">
       <div class="info__container">
         <svg width="32px" height="32px" viewBox="0 0 25 25">
           <g stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="square">
@@ -145,7 +145,7 @@
         <div class="info__wrapper">
           <div class="info__box">
             <img src="img/test-info-1.png" alt="" class="info__img">
-            <div class="info__title">Панировочные сухари и смеси</div>
+            <div class="info__subtitle">Панировочные сухари и смеси</div>
             <div class="info__text">Натуральными куриными полуфабрикатами называют части кур и цыплят, предназначенные для реализации в торговой сети и приготовления продуктов питания</div>
             <a href="" class="info__link">Узнать больше</a>
           </div>
@@ -153,7 +153,7 @@
       </div>
     </div>
 
-    <div class="info__item info__item_2">
+    <div class="info__item info__item_2 js-info-item">
       <div class="info__container">
         <svg width="32px" height="32px" viewBox="0 0 25 25">
           <g stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="square">
@@ -169,7 +169,7 @@
         <div class="info__wrapper">
           <div class="info__box">
             <img src="img/test-info-1.png" alt="" class="info__img">
-            <div class="info__title">Панировочные сухари и смеси</div>
+            <div class="info__subtitle">Панировочные сухари и смеси</div>
             <div class="info__text">Натуральными куриными полуфабрикатами называют части кур и цыплят, предназначенные для реализации в торговой сети и приготовления продуктов питания</div>
             <a href="" class="info__link">Узнать больше</a>
           </div>
@@ -177,7 +177,7 @@
       </div>
     </div>
 
-    <div class="info__item info__item_3">
+    <div class="info__item info__item_3 js-info-item">
       <div class="info__container">
         <svg width="32px" height="32px" viewBox="0 0 25 25">
           <g stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="square">
@@ -193,7 +193,7 @@
         <div class="info__wrapper">
           <div class="info__box">
             <img src="img/test-info-1.png" alt="" class="info__img">
-            <div class="info__title">Панировочные сухари и смеси</div>
+            <div class="info__subtitle">Панировочные сухари и смеси</div>
             <div class="info__text">Натуральными куриными полуфабрикатами называют части кур и цыплят, предназначенные для реализации в торговой сети и приготовления продуктов питания</div>
             <a href="" class="info__link">Узнать больше</a>
           </div>
@@ -201,7 +201,7 @@
       </div>
     </div>
 
-    <div class="info__item info__item_4">
+    <div class="info__item info__item_4 js-info-item">
       <div class="info__container">
         <svg width="32px" height="32px" viewBox="0 0 25 25">
           <g stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="square">
@@ -217,7 +217,7 @@
         <div class="info__wrapper">
           <div class="info__box">
             <img src="img/test-info-1.png" alt="" class="info__img">
-            <div class="info__title">Панировочные сухари и смеси</div>
+            <div class="info__subtitle">Панировочные сухари и смеси</div>
             <div class="info__text">Натуральными куриными полуфабрикатами называют части кур и цыплят, предназначенные для реализации в торговой сети и приготовления продуктов питания</div>
             <a href="" class="info__link">Узнать больше</a>
           </div>
@@ -225,7 +225,7 @@
       </div>
     </div>
 
-    <div class="info__item info__item_5">
+    <div class="info__item info__item_5 js-info-item">
       <div class="info__container">
         <svg width="32px" height="32px" viewBox="0 0 25 25">
           <g stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="square">
@@ -241,7 +241,7 @@
         <div class="info__wrapper">
           <div class="info__box">
             <img src="img/test-info-1.png" alt="" class="info__img">
-            <div class="info__title">Панировочные сухари и смеси</div>
+            <div class="info__subtitle">Панировочные сухари и смеси</div>
             <div class="info__text">Натуральными куриными полуфабрикатами называют части кур и цыплят, предназначенные для реализации в торговой сети и приготовления продуктов питания</div>
             <a href="" class="info__link">Узнать больше</a>
           </div>
@@ -271,6 +271,43 @@
     </div>
 
     <div class="history__box history__img anim-history-img" style="background-image: url('img/history.jpg');">
+      <div class="circle">
+        <div class="circle__item">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+            <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+            <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+            <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+          </svg>
+        </div>
+        <div class="circle__item">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+            <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+            <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+            <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+          </svg>
+        </div>
+        <div class="circle__item">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+            <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+            <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+            <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+          </svg>
+        </div>
+        <div class="circle__item">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+            <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+            <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+            <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+          </svg>
+        </div>
+        <div class="circle__item">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+            <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+            <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+            <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -282,10 +319,10 @@
       <div class="centered__box">
         <div class="centered__item">
           <div class="centered__icon">
-            <img src="img/icons/companies-1.png" alt="" class="anim-centered-top">
+            <img src="img/icons/companies-1.png" alt="" class="anim-centered-left">
           </div>
           <div class="centered__inner">
-            <a href="#" class="centered__name anim-centered-name">ООО ГК «Атлантис»</a>
+            <a href="#" class="centered__name anim-centered-left">ООО ГК «Атлантис»</a>
             <div class="centered__description anim-centered-top">
               производство замороженных полуфабрикатов из рыбы и морепродуктов
             </div>
@@ -294,40 +331,40 @@
 
         <div class="centered__item">
           <div class="centered__icon">
-            <img src="img/icons/companies-2.png" alt="" class="anim-centered-top">
+            <img src="img/icons/companies-2.png" alt="" class="anim-centered-left">
           </div>
           <div class="centered__inner">
-            <a href="#" class="centered__name anim-centered-name">ООО «Водный мир»</a>
+            <a href="#" class="centered__name anim-centered-left">ООО «Водный мир»</a>
             <div class="centered__description anim-centered-top">производство замороженных полуфабрикатов из курицы и сыра.</div>
           </div>
         </div>
 
         <div class="centered__item">
           <div class="centered__icon">
-            <img src="img/icons/companies-3.png" alt="" class="anim-centered-top">
+            <img src="img/icons/companies-3.png" alt="" class="anim-centered-left">
           </div>
           <div class="centered__inner">
-            <a href="#" class="centered__name anim-centered-name">ООО «Кёнигсбергер Хандельсконтор»</a>
+            <a href="#" class="centered__name anim-centered-left">ООО «Кёнигсбергер Хандельсконтор»</a>
             <div class="centered__description anim-centered-top">производство панировочных сухарей и смесей</div>
           </div>
         </div>
 
         <div class="centered__item">
           <div class="centered__icon">
-            <img src="img/icons/companies-4.png" alt="" class="anim-centered-top">
+            <img src="img/icons/companies-4.png" alt="" class="anim-centered-left">
           </div>
           <div class="centered__inner">
-            <a href="#" class="centered__name anim-centered-name">ООО «Калининградский Мукомол»</a>
+            <a href="#" class="centered__name anim-centered-left">ООО «Калининградский Мукомол»</a>
             <div class="centered__description anim-centered-top">производство муки</div>
           </div>
         </div>
 
         <div class="centered__item">
           <div class="centered__icon">
-            <img src="img/icons/companies-5.png" alt="" class="anim-centered-top">
+            <img src="img/icons/companies-5.png" alt="" class="anim-centered-left">
           </div>
           <div class="centered__inner">
-            <a href="#" class="centered__name anim-centered-name">ООО «Кенигсбергер Транспортгешефт»</a>
+            <a href="#" class="centered__name anim-centered-left">ООО «Кенигсбергер Транспортгешефт»</a>
             <div class="centered__description anim-centered-top">оказание транспортных услуг</div>
           </div>
         </div>
@@ -348,44 +385,206 @@
 <section class="statistics container-full">
   <div class="statistics__item anim-statistics-item">
     <div class="statistics__box statistics__box_text statistics__box_left">
-      <div class="statistics__title anim-statistics-title">47000 М2</div>
+      <div class="statistics__title anim-statistics-title-left">47000 М2</div>
       <div class="statistics__description anim-statistics-description">Площадь построенных производств 47 000 м2</div>
     </div>
 
     <div class="statistics__box statistics__box_img anim-statistics-img">
+      <div class="statistics-circle">
+        <div class="circle">
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
       <div class="statistics__img" style="background-image: url('img/stat-1.jpg');"></div>
     </div>
   </div>
 
+
+
   <div class="statistics__item anim-statistics-item">
     <div class="statistics__box statistics__box_img anim-statistics-img">
+      <div class="statistics-circle">
+        <div class="circle">
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
       <div class="statistics__img" style="background-image: url('img/stat-2.jpg');"></div>
     </div>
 
     <div class="statistics__box statistics__box_text">
-      <div class="statistics__title anim-statistics-title">10га</div>
+      <div class="statistics__title anim-statistics-title-right">10га</div>
       <div class="statistics__description anim-statistics-description">Освоенной земли 10га</div>
     </div>
   </div>
 
+
+
   <div class="statistics__item anim-statistics-item">
     <div class="statistics__box statistics__box_text statistics__box_left">
-      <div class="statistics__title anim-statistics-title">1500</div>
+      <div class="statistics__title anim-statistics-title-left">1500</div>
       <div class="statistics__description anim-statistics-description">количество сотрудников более 1500 человек</div>
     </div>
 
     <div class="statistics__box statistics__box_img anim-statistics-img">
+      <div class="statistics-circle">
+        <div class="circle">
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
       <div class="statistics__img" style="background-image: url('img/stat-3.jpg');"></div>
     </div>
   </div>
 
+
+
   <div class="statistics__item anim-statistics-item">
     <div class="statistics__box statistics__box_img anim-statistics-img">
+      <div class="statistics-circle">
+        <div class="circle">
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+          <div class="circle__item">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="e4lm87lsnu81" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+              <rect id="e4lm87lsnu82" display="none" width="46" height="46" rx="0" ry="0" transform="matrix(18.06237349851870 0 0 24.84468360425481 -190.86918093592993 -349.20527289786054)" fill="rgb(84,131,204)" stroke="none" stroke-width="1"></rect>
+              <circle id="e4lm87lsnu83" r="318.416268" transform="matrix(1.00184037708271 0.00062546428362 0.00062545576549 -1.00182673313136 320.00000000061056 319.99999999945084)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-opacity="0" stroke-dasharray="2010.620000"></circle>
+              <circle id="e4lm87lsnu84" r="319" transform="matrix(1 0 0 1 320.00000000118780 320.00000000118774)" fill="none" stroke="rgb(255,255,255)" stroke-width="1" stroke-dashoffset="2010.620000" stroke-dasharray="2010.620000"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
       <div class="statistics__img" style="background-image: url('img/stat-4.jpg');"></div>
     </div>
 
     <div class="statistics__box statistics__box_text">
-      <div class="statistics__title anim-statistics-title">122 400</div>
+      <div class="statistics__title anim-statistics-title-right">122 400</div>
       <div class="statistics__description anim-statistics-description">Общий объем производства 122.4 тысяч тон в год</div>
     </div>
   </div>
@@ -411,14 +610,14 @@
           </div>
         </div>
 
-        <div class="centered__wrap_white">
+        <div class="centered__wrap_white anim-centered-opacity">
           <div class="centered__subtitle">
-            <div class="anim-centered-translate">
+            <div>
               ГК «Атлантис» следит за своей репутацией и поддерживает имидж надежного партнера и качественного производителя
             </div>
           </div>
           <div class="centered__text">
-            <div class="anim-centered-translate">
+            <div>
               Нацеленность на долгосрочные отношения с бизнес-партнерами и получение комплиментарных отзывов о сотрудничестве - вот, что заставляет холдинг всегда быть начеку и не снижать планку!
             </div>
           </div>
