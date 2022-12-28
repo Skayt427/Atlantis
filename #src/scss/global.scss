@@ -223,109 +223,109 @@ body {
       }
     }
   }
+}
 
-  #e4lm87lsnu83 {
-    animation-name: e4lm87lsnu83_s_o, e4lm87lsnu83_s_do;
-    animation-duration: 5000ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
+#e4lm87lsnu83 {
+  animation-name: e4lm87lsnu83_s_o, e4lm87lsnu83_s_do;
+  animation-duration: 5000ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes e4lm87lsnu83_s_o {
+  0% {
+    stroke-opacity: 0
   }
 
-  @keyframes e4lm87lsnu83_s_o {
-    0% {
-      stroke-opacity: 0
-    }
-
-    60% {
-      stroke-opacity: 0;
-      animation-timing-function: cubic-bezier(0.255000, 0, 0.120000, 1)
-    }
-
-    60.200000% {
-      stroke-opacity: 1
-    }
-
-    100% {
-      stroke-opacity: 1
-    }
+  60% {
+    stroke-opacity: 0;
+    animation-timing-function: cubic-bezier(0.255000, 0, 0.120000, 1)
   }
 
-  @keyframes e4lm87lsnu83_s_do {
-    0% {
-      stroke-dashoffset: 0
-    }
-
-    60.200000% {
-      stroke-dashoffset: 0;
-      animation-timing-function: cubic-bezier(0.255000, 0, 0.120000, 1)
-    }
-
-    90% {
-      stroke-dashoffset: 2010.620000
-    }
-
-    100% {
-      stroke-dashoffset: 2010.620000
-    }
+  60.200000% {
+    stroke-opacity: 1
   }
 
-  #e4lm87lsnu84 {
-    animation-name: e4lm87lsnu84_s_o, e4lm87lsnu84_s_do, e4lm87lsnu84_s_da;
-    animation-duration: 5000ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-direction: normal;
-    animation-iteration-count: infinite;
+  100% {
+    stroke-opacity: 1
+  }
+}
+
+@keyframes e4lm87lsnu83_s_do {
+  0% {
+    stroke-dashoffset: 0
   }
 
-  @keyframes e4lm87lsnu84_s_o {
-    0% {
-      stroke-opacity: 1
-    }
-
-    60% {
-      stroke-opacity: 1;
-      animation-timing-function: cubic-bezier(0.255000, 0, 0.120000, 1)
-    }
-
-    60.200000% {
-      stroke-opacity: 0
-    }
-
-    100% {
-      stroke-opacity: 0
-    }
+  60.200000% {
+    stroke-dashoffset: 0;
+    animation-timing-function: cubic-bezier(0.255000, 0, 0.120000, 1)
   }
 
-  @keyframes e4lm87lsnu84_s_do {
-    0% {
-      stroke-dashoffset: 2010.620000;
-      animation-timing-function: cubic-bezier(0.255000, 0, 0.120000, 1)
-    }
-
-    30% {
-      stroke-dashoffset: 0
-    }
-
-    100% {
-      stroke-dashoffset: 0
-    }
+  90% {
+    stroke-dashoffset: 2010.620000
   }
 
-  @keyframes e4lm87lsnu84_s_da {
-    0% {
-      stroke-dasharray: 2010.620000;
-      animation-timing-function: cubic-bezier(0.255000, 0, 0.120000, 1)
-    }
+  100% {
+    stroke-dashoffset: 2010.620000
+  }
+}
 
-    30% {
-      stroke-dasharray: 2010.620000
-    }
+#e4lm87lsnu84 {
+  animation-name: e4lm87lsnu84_s_o, e4lm87lsnu84_s_do, e4lm87lsnu84_s_da;
+  animation-duration: 5000ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
 
-    100% {
-      stroke-dasharray: 2010.620000
-    }
+@keyframes e4lm87lsnu84_s_o {
+  0% {
+    stroke-opacity: 1
+  }
+
+  60% {
+    stroke-opacity: 1;
+    animation-timing-function: cubic-bezier(0.255000, 0, 0.120000, 1)
+  }
+
+  60.200000% {
+    stroke-opacity: 0
+  }
+
+  100% {
+    stroke-opacity: 0
+  }
+}
+
+@keyframes e4lm87lsnu84_s_do {
+  0% {
+    stroke-dashoffset: 2010.620000;
+    animation-timing-function: cubic-bezier(0.255000, 0, 0.120000, 1)
+  }
+
+  30% {
+    stroke-dashoffset: 0
+  }
+
+  100% {
+    stroke-dashoffset: 0
+  }
+}
+
+@keyframes e4lm87lsnu84_s_da {
+  0% {
+    stroke-dasharray: 2010.620000;
+    animation-timing-function: cubic-bezier(0.255000, 0, 0.120000, 1)
+  }
+
+  30% {
+    stroke-dasharray: 2010.620000
+  }
+
+  100% {
+    stroke-dasharray: 2010.620000
   }
 }

@@ -36,15 +36,17 @@ document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
   // header
-  gsap.from('.anim-opacity', {
-    scrollTrigger: {
-      trigger: '.anim-opacity',
-      toggleActions: 'play pause resume none',
-    },
-    duration: 1,
-    delay: 0.5,
-    opacity: 0,
-  });
+  if (window.innerWidth >= 760) {
+    gsap.from('.anim-opacity', {
+      scrollTrigger: {
+        trigger: '.anim-opacity',
+        toggleActions: 'play pause resume none',
+      },
+      duration: 0.5,
+      delay: 0.5,
+      opacity: 0,
+    });
+  };
 
   gsap.from('.swiper-slide-active .anim-banner-title', {
     scrollTrigger: {
@@ -72,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleActions: 'play pause resume none',
     },
     duration: 1,
-    delay: 1,
+    // delay: 1,
     x: 50,
     opacity: 0,
   });
@@ -83,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleActions: 'play pause resume none',
     },
     duration: 1,
-    delay: 1,
+    // delay: 1,
     x: -50,
     opacity: 0,
   });
@@ -113,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: '.history',
       toggleActions: 'play pause resume none',
+      start: 'center bottom',
     },
     duration: 1,
     x: -2000,
@@ -135,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
       start: 'center bottom',
     },
     duration: 1,
-    delay: 1,
     y: 100,
     opacity: 0,
   });
@@ -169,6 +171,16 @@ document.addEventListener("DOMContentLoaded", function () {
     x: -2000,
   });
 
+  gsap.from('.anim-centered-left-delay', {
+    scrollTrigger: {
+      trigger: '.centered_one',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    delay: 1,
+    x: -2000,
+  });
+
   gsap.from('.anim-centered-top', {
     scrollTrigger: {
       trigger: '.centered_one',
@@ -195,7 +207,6 @@ document.addEventListener("DOMContentLoaded", function () {
           scrollTrigger: {
             trigger: parent,
             toggleActions: 'play pause resume none',
-            start: 'center bottom',
           },
           duration: 1,
           x: -2000,
@@ -207,7 +218,6 @@ document.addEventListener("DOMContentLoaded", function () {
           scrollTrigger: {
             trigger: parent,
             toggleActions: 'play pause resume none',
-            start: 'center bottom',
           },
           duration: 1,
           x: 2000,
@@ -218,7 +228,6 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
           trigger: parent,
           toggleActions: 'play pause resume none',
-          start: 'center bottom',
         },
         duration: 1,
         delay: 0.5,
@@ -230,7 +239,6 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollTrigger: {
           trigger: parent,
           toggleActions: 'play pause resume none',
-          start: 'center bottom',
         },
         duration: 1,
         width: '50%',
