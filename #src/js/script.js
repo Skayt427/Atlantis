@@ -18,6 +18,21 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  // Скролл к элементу
+  let scrollTrigger = document.querySelectorAll('.js-scroll-trigger')
+  if (scrollTrigger.length) {
+    scrollTrigger.forEach(trigger => {
+      trigger.addEventListener('click', function () {
+        let triggerData = this.dataset.scroll;
+        let scrollItem = document.querySelector('.js-scroll-item[data-scroll="' + triggerData + '"]');
+        scrollItem.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      });
+    });
+  };
+
   let infoHover = document.querySelectorAll('.js-info-item');
 
   if (infoHover.length) {
@@ -28,6 +43,35 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       infoItem.addEventListener('mouseout', function () {
         infoWrapper.classList.remove('hover');
+      });
+    });
+  };
+
+  // Выпадающие списки
+  let toggleBtn = document.querySelectorAll('.js-toggle-btn');
+
+  if (toggleBtn.length) {
+    toggleBtn.forEach(btn => {
+      let dropItem = btn.closest('.js-toggle-container');
+      let dropList = dropItem.querySelector('.js-toggle-dropdown');
+      let dropListHeight = dropList.offsetHeight;
+      dropList.style.height = 0;
+      btn.addEventListener('click', function () {
+        let activeDropItem = document.querySelector('.js-toggle-container.active');
+        if (activeDropItem) {
+          activeDropItem.classList.remove('active');
+          activeDropItem.querySelector('.js-toggle-dropdown').style.height = 0;
+        };
+
+        if (activeDropItem != dropItem) {
+          dropItem.classList.add('active');
+        };
+        let dropListNewHeight = dropList.offsetHeight;
+        if (dropListNewHeight == 0) {
+          dropList.style.height = `${dropListHeight}px`;
+        } else {
+          dropList.style.height = 0;
+        };
       });
     });
   };
@@ -49,6 +93,15 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   gsap.from('.swiper-slide-active .anim-banner-title', {
+    scrollTrigger: {
+      trigger: '.banner',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    x: -2000,
+  });
+
+  gsap.from('.anim-banner-subtitle', {
     scrollTrigger: {
       trigger: '.banner',
       toggleActions: 'play pause resume none',
@@ -305,4 +358,36 @@ document.addEventListener("DOMContentLoaded", function () {
     delay: 0.5,
     opacity: 0,
   });
+
+  // contacts
+  gsap.from('.anim-contacts-item', {
+    scrollTrigger: {
+      trigger: '.contacts',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    x: -2000,
+    stagger: 0.2,
+  });
+
+  // map
+  gsap.from('.anim-map-title', {
+    scrollTrigger: {
+      trigger: '.map',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    x: -2000,
+  });
+
+  gsap.from('.anim-map-btn', {
+    scrollTrigger: {
+      trigger: '.map',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    y: 150,
+    opacity: 0,
+  });
 });
+

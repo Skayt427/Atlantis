@@ -24,15 +24,16 @@
         <nav class="header__wrapper">
           <ul class="menu">
             <li class="menu__item"><a href="/" class="menu__link">Каталог</a></li>
-            <li class="menu__item"><a href="/" class="menu__link">Вакансии</a></li>
-            <li class="menu__item"><a href="/" class="menu__link">Контакты</a></li>
+            <li class="menu__item"><a href="/vacancy.html" class="menu__link">Вакансии</a></li>
+            <li class="menu__item"><a href="/contacts.html" class="menu__link">Контакты</a></li>
           </ul>
         </nav>
       </header>
 
       <main class="main">
+        <!-- Хедер -->
 
-<div class="banner shadow">
+<section class="banner shadow">
   <!-- Слайдер фона -->
   <div class="swiper js-slider-banner-bg banner__bg">
     <div class="swiper-wrapper">
@@ -54,10 +55,10 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <h1 class="banner__title anim-banner-title">
-              <div class="banner__line">ИСКУССТВО</div>
-              <div class="banner__line">СОЗДАВАТЬ -</div>
-              <div class="banner__line">ЭТО ВОЗМОЖНО</div>
-              <div class="banner__line">С ГК «АТЛАНТИС»</div>
+              ИСКУССТВО<br>
+              СОЗДАВАТЬ <br>
+              ЭТО ВОЗМОЖНО<br>
+              С ГК «АТЛАНТИС»
             </h1>
 
             <div class="banner__text anim-banner-translate">
@@ -82,7 +83,7 @@
     </div>
 
     <div class="banner__bottom anim-banner-translate">
-      <a href="#info" class="banner__next">
+      <button type="button" class="banner__next js-scroll-trigger" data-scroll="info">
         <div>
           <span>
             СТРУКТУРА ПРОИЗВОДСТВА
@@ -92,7 +93,7 @@
           <path d="M18.0699 14.4299L11.9999 20.4999L5.92993 14.4299" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
           <path d="M12 3.5V20.33" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
-      </a>
+      </button>
 
       <a href="/" class="banner__link anim-scale-two-circle"><span>Перейти в каталог</span></a>
 
@@ -112,9 +113,9 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<section class="info anim-info-bg" id="info" style="background-image: url('img/info.png');">
+<section class="info anim-info-bg js-scroll-item" data-scroll="info" style="background-image: url('img/info.png');">
   <div class="info__content container">
     <div class="info__title anim-info__title">
       <div class="info__title-line">
@@ -689,6 +690,7 @@
   </div>
 </section>
 
+<!-- Футер -->
 </main>
 </div>
 

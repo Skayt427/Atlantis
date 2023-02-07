@@ -119,6 +119,12 @@ body {
 
 .anim-scale-two-circle {
   position: relative;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
 
   &::before {
     position: absolute;
@@ -328,4 +334,10 @@ body {
   100% {
     stroke-dasharray: 2010.620000
   }
+}
+
+.js-toggle-dropdown {
+  overflow: hidden;
+  transition: height .5s;
+  box-sizing: border-box;
 }
