@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let body = document.querySelector('body');
 
   new Swiper('.js-slider-banner-content', {
     slidesPerView: 1,
@@ -81,6 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
           dropList.style.height = 0;
         };
       });
+
+      window.addEventListener('resize', function () {
+        if (document.querySelector('.js-toggle-container.active')) {
+          document.querySelector('.js-toggle-container.active').classList.remove('active');
+        };
+        dropList.style.height = '';
+        dropListHeight = dropList.offsetHeight;
+        dropList.style.height = 0;
+      });
     });
   };
 
@@ -90,6 +100,140 @@ document.addEventListener("DOMContentLoaded", function () {
   if (inputTel.length) {
     inputTel.forEach(tel => {
       new Inputmask("+7(999)999-99-99").mask(tel);
+    });
+  };
+
+  // Модалка
+  let modalTrigger = document.querySelectorAll('.js-modal-trigger');
+
+  if (modalTrigger.length >= 1) {
+    modalTrigger.forEach(trigger => {
+      // Открыетие
+      trigger.addEventListener('click', function () {
+        let trigger = this;
+        let triggerData = this.dataset.modal;
+        let modal = document.querySelector('.js-modal[data-modal="' + triggerData + '"]');
+        modal.classList.add('active');
+        body.classList.add('noscroll');
+
+        // Расположение контейнера по центру
+        let modalContainer = modal.querySelector('.modal__container');
+        function modalPosition() {
+          let modalPaddingTop = parseInt(getComputedStyle(modal).getPropertyValue('padding-top'));
+          let modalPaddingBottom = parseInt(getComputedStyle(modal).getPropertyValue('padding-bottom'));
+          let modalHeight = modal.offsetHeight - modalPaddingTop - modalPaddingBottom;
+          if (modalHeight > modalContainer.offsetHeight) {
+            let freeSpace = modalHeight - modalContainer.offsetHeight;
+            modalContainer.style.top = freeSpace / 2 + 'px';
+          };
+        };
+        modalPosition();
+        window.addEventListener('resize', modalPosition);
+      });
+    });
+
+    let modal = document.querySelectorAll('.js-modal');
+    modal.forEach(modal => {
+      // Закрытие через клик на крестик
+      let closeBtn = modal.querySelector('.js-modal-close');
+      closeBtn.addEventListener('click', function () {
+        this.closest('.js-modal').classList.remove('active');
+        body.classList.remove('noscroll');
+      });
+
+      // Закрытие через клик по фону
+      let modalBg = modal.querySelector('.js-modal-bg');
+      modalBg.addEventListener('click', function () {
+        this.closest('.js-modal').classList.remove('active');
+        body.classList.remove('noscroll');
+      });
+    });
+  };
+
+  // Прикрепление файла
+  // Прикрепление файла
+  let msgInput = document.querySelectorAll('.pin__input');
+
+  if (msgInput) {
+    msgInput.forEach(input => {
+      let filesList = [];
+      let bottom = input.closest('.pin');
+
+      function checkFiles(bottom, files) {
+        if (files.length != 0) {
+          bottom.querySelector('.pin__attach').style.display = 'none';
+        } else {
+          bottom.querySelector('.pin__attach').style.display = 'block';
+        };
+      }
+
+      function assignFiles(bottom, files) {
+        const fileInput = bottom.querySelector('.submit-files');
+        const dataTransfer = new DataTransfer();
+        files.forEach(file => {
+          dataTransfer.items.add(file);
+        });
+        fileInput.files = dataTransfer.files;
+      }
+
+      function renderFileList(files, bottom) {
+        let filesWrapper = bottom.querySelector('.pin__file-list');
+        filesWrapper.innerHTML = '';
+
+        checkFiles(bottom, filesList);
+
+        //Проходимся по файлам
+        for (let i = 0; i < files.length; i++) {
+          let span = document.createElement('span');
+          span.classList.add('pin__file');
+          span.innerHTML = files[i].name;
+
+          let removeBtn = document.createElement('button');
+          removeBtn.setAttribute('type', 'button');
+          removeBtn.classList.add('pin__file-remove-button');
+          removeBtn.insertAdjacentHTML('beforeend', `
+                  <svg class="pin__file-remove" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20px" height="20px">
+                      <path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"/>
+                  </svg>
+              `);
+
+          function onRemoveButtonClick(e) {
+            e.preventDefault();
+            let fileHTML = this.closest('.pin__file');
+            filesList = filesList.filter((f) => f.name !== files[i].name);
+            fileHTML.remove();
+
+            checkFiles(bottom, filesList);
+            assignFiles(bottom, filesList);
+
+            removeBtn.removeEventListener('click', onRemoveButtonClick)
+          }
+
+          removeBtn.addEventListener('click', onRemoveButtonClick)
+
+          span.append(removeBtn);
+          filesWrapper.append(span)
+        };
+
+        assignFiles(bottom, filesList);
+      };
+
+      input.addEventListener('click', (e) => {
+        e.target.value = '';
+      });
+
+      input.addEventListener('change', (e) => {
+        let files = e.target.files;
+
+        Array.from(files).forEach(file => {
+          let foundFile = filesList.find(f => f.name === file.name);
+          if (!foundFile) {
+            filesList.push(file);
+          }
+        });
+
+        renderFileList(filesList, bottom);
+      });
     });
   };
 
