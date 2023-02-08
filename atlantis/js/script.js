@@ -18,6 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  new Swiper('.detail-slider', {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+  });
+
   // Скролл к элементу
   let scrollTrigger = document.querySelectorAll('.js-scroll-trigger')
   if (scrollTrigger.length) {
@@ -73,6 +81,15 @@ document.addEventListener("DOMContentLoaded", function () {
           dropList.style.height = 0;
         };
       });
+    });
+  };
+
+  // Маска для инпута https://github.com/RobinHerbots/Inputmask
+  let inputTel = document.querySelectorAll('input[type="tel"]');
+
+  if (inputTel.length) {
+    inputTel.forEach(tel => {
+      new Inputmask("+7(999)999-99-99").mask(tel);
     });
   };
 

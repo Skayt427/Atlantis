@@ -166,6 +166,8 @@ body {
   }
 }
 
+.anim-circle-scale {}
+
 .statistics-circle {
   position: absolute;
   top: 50%;
@@ -227,6 +229,32 @@ body {
         height: 58%;
         transform: rotate(180deg);
       }
+    }
+  }
+}
+
+.anim-big-circle {
+  &__wrapper {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-blue;
+    }
+
+    &::before {
+      width: 100%;
+      padding-bottom: 100%;
+    }
+
+    &::after {
+      width: 90%;
+      padding-bottom: 100%;
     }
   }
 }
