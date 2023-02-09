@@ -27,6 +27,69 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  let sliders = document.querySelectorAll('.js-slider');
+
+  if (sliders.length) {
+    sliders.forEach(function (slider) {
+      new Swiper(slider, {
+        pagination: {
+          el: slider.closest('.slider').querySelector('.slider-pagination__page'),
+          type: "fraction",
+          formatFractionCurrent: function (number) {
+            if (number <= 9) {
+              number = '0' + number;
+            };
+            return number;
+          },
+          formatFractionTotal: function (number) {
+            if (number <= 9) {
+              number = '0' + number;
+            };
+            return number;
+          },
+        },
+        navigation: {
+          nextEl: slider.closest('.slider').querySelector('.js-slider-pagination__arrow--next'),
+          prevEl: slider.closest('.slider').querySelector('.js-slider-pagination__arrow--prev'),
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          600: {
+            slidesPerView: 2,
+            spaceBetween: 34,
+          },
+          991: {
+            slidesPerView: 3,
+            spaceBetween: 34,
+          },
+        },
+      });
+    });
+  };
+
+  // Перенос адаптивных стрелок слайдеров
+  let adaptiveArrows = document.querySelectorAll('.js-adaptive-arrows');
+
+  function resizeAdaptiveArrows() {
+    if (adaptiveArrows.length) {
+      adaptiveArrows.forEach(arrows => {
+        if (window.innerWidth <= 768) {
+          let slider = arrows.closest('.slider').querySelector('.js-slider');
+          slider.after(arrows);
+        } else {
+          let sliderTop = arrows.closest('.slider').querySelector('.slider__top');
+          sliderTop.append(arrows);
+        };
+      });
+    };
+  };
+
+  resizeAdaptiveArrows();
+  window.addEventListener('resize', resizeAdaptiveArrows);
+
   // Скролл к элементу
   let scrollTrigger = document.querySelectorAll('.js-scroll-trigger')
   if (scrollTrigger.length) {
@@ -147,6 +210,24 @@ document.addEventListener("DOMContentLoaded", function () {
         this.closest('.js-modal').classList.remove('active');
         body.classList.remove('noscroll');
       });
+    });
+  };
+
+  // 
+  let social = document.querySelectorAll('.js-social-item');
+
+  if (social.length) {
+    social.forEach(item => {
+      item.addEventListener('click', function () {
+        let itemContainer = item.closest('.js-social');
+        let itemActive = itemContainer.querySelector('.js-social-item.active');
+        if (itemActive) {
+          itemActive.classList.remove('active');
+        };
+
+        this.classList.toggle('active');
+      });
+
     });
   };
 
@@ -531,6 +612,17 @@ document.addEventListener("DOMContentLoaded", function () {
     stagger: 0.2,
   });
 
+  // vacancy
+  gsap.from('.anim-vacancy-item', {
+    scrollTrigger: {
+      trigger: '.vacancy',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    x: -2000,
+    stagger: 0.2,
+  });
+
   // map
   gsap.from('.anim-map-title', {
     scrollTrigger: {
@@ -544,6 +636,46 @@ document.addEventListener("DOMContentLoaded", function () {
   gsap.from('.anim-map-btn', {
     scrollTrigger: {
       trigger: '.map',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    y: 150,
+    opacity: 0,
+  });
+
+  // characteristic
+  gsap.from('.anim-characteristic-title', {
+    scrollTrigger: {
+      trigger: '.characteristic',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    x: -2000,
+  });
+
+  gsap.from('.anim-characteristic-slide', {
+    scrollTrigger: {
+      trigger: '.characteristic',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    y: 150,
+    opacity: 0,
+  });
+
+  // slider
+  gsap.from('.anim-slider-title', {
+    scrollTrigger: {
+      trigger: '.slider',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    x: -2000,
+  });
+
+  gsap.from('.anim-slider-name', {
+    scrollTrigger: {
+      trigger: '.slider',
       toggleActions: 'play pause resume none',
     },
     duration: 1,

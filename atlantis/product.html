@@ -33,12 +33,12 @@
       <main class="main">
         <!-- Хедер -->
 
-<section class="banner shadow">
+<section class="banner banner--product shadow">
   <div class="banner__bg">
     <img src="img/footer-bg.jpg" alt="">
   </div>
 
-  <div class="banner__wrapper banner--detail container">
+  <div class="banner__wrapper container">
     <h3 class="banner__page-name anim-banner-subtitle">Полуфабрикаты Из Курицы</h3>
     <h2 class="banner__subtitle anim-banner-subtitle">
       Наггетсы
@@ -96,21 +96,21 @@
 
 <section class="characteristic container">
   <div class="characteristic__wrapper">
-    <div class="characteristic__title">Характеристики</div>
+    <div class="characteristic__title anim-characteristic-title">Характеристики</div>
 
-    <div class="characteristic__subtitle">Состав:</div>
-    <p class="characteristic__text">
+    <div class="characteristic__subtitle anim-characteristic-slide">Состав:</div>
+    <p class="characteristic__text anim-characteristic-slide">
       Мясо цыпленка, мука: пшеничная, рисовая, кукурузная; крахмал кукурузный, глютен пшеничный, крупа манная, соль, стабилизатор Е1420, загустители: Е412, Е415, Е1414; масло подсолнечное/масло подсолнечное, антиокислители Е319, Е330; перец: черный, белый, красный чили; сахар, разрыхлители: Е450i, E500ii; лук, чеснок, имбирь, экстракт дрожжей, соус соевый (вода, соя, пшеница, соль, консервант бензоат натрия), эмульгатор Е471, регулятор кислотности Е451i, усилитель вкуса и аромата Е621, ароматизаторы
       Может содержать следы горчицы, сельдерея, яиц, молока, орехов, арахиса, диоксида серы.
     </p>
 
-    <div class="characteristic__subtitle">Пищевая ценность <span>(на 100 г продукта):</span></div>
-    <p class="characteristic__text">Энергетическая ценность (калорийность) – 250 ккал или 1050 кДжБелки – 13,0 г Жиры – 15,0 г Углеводы – 16,0 </p>
+    <div class="characteristic__subtitle anim-characteristic-slide">Пищевая ценность <span>(на 100 г продукта):</span></div>
+    <p class="characteristic__text anim-characteristic-slide">Энергетическая ценность (калорийность) – 250 ккал или 1050 кДжБелки – 13,0 г Жиры – 15,0 г Углеводы – 16,0 </p>
 
-    <div class="characteristic__subtitle">Срок годности:</div>
-    <p class="characteristic__text">12 мес.</p>
+    <div class="characteristic__subtitle anim-characteristic-slide">Срок годности:</div>
+    <p class="characteristic__text anim-characteristic-slide">12 мес.</p>
 
-    <a href="/" class="characteristic__back">
+    <a href="/" class="characteristic__back arrow anim-characteristic-slide">
       <svg xmlns="http://www.w3.org/2000/svg" width="38" height="24" viewBox="0 0 38 24" fill="none">
         <path d="M9.57 5.92993L3.5 11.9999L9.57 18.0699" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
         <path d="M37 12H4" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -118,13 +118,201 @@
       Вернуться
     </a>
 
-    <button type="button" class="characteristic__request anim-big-circle">
+    <button type="button" class="characteristic__request anim-big-circle anim-characteristic-slide js-modal-trigger" data-modal="buy">
       <div class="anim-big-circle__wrapper">
         Оставить
         <br>
         заявку
       </div>
     </button>
+  </div>
+</section>
+
+<div class="modal js-modal" data-modal="buy">
+  <div class="modal__bg js-modal-bg"></div>
+
+  <div class="modal__close js-modal-close">
+    <svg width="44px" height="44px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#000000" d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z" />
+    </svg>
+  </div>
+
+  <div class="modal__wrapper">
+    <div class="modal__container">
+      <div class="modal__top">
+        <img src="img/logo.svg" alt="" class="modal__logo">
+        <div class="modal__name">Наггетсы в панировке</div>
+        <img src="img/product-1.png" alt="" class="modal__img">
+      </div>
+
+      <div class="modal__content">
+        <div class="modal__title">Оставить заявку</div>
+        <div class="modal__description">Наш специалист свяжется с Вами в ближайшее время</div>
+
+        <form class="modal__form">
+          <label class="label">
+            <div class="label__title">ФИО *</div>
+            <input type="text" class="input" placeholder="ФИО" required>
+          </label>
+          <label class="label">
+            <div class="label__title">ВАШ Телефон</div>
+            <input type="tel" class="input" placeholder="+7">
+          </label>
+          <label class="label">
+            <div class="label__title">ВАШ E-mail *</div>
+            <input type="email" class="input" placeholder="E-MAIL" required>
+          </label>
+          <label class="label">
+            <div class="label__title">Введите текст</div>
+            <textarea class="textarea" placeholder="ВВЕДИТЕ ТЕКСТ"></textarea>
+          </label>
+
+          <button class="modal__submit" type="submit">Отправить</button>
+
+          <div class="modal__subtext">
+            Я прочитал и принимаю условия Соглашения об обработке персональных данных
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="slider container">
+  <div class="slider__top">
+    <h3 class="anim-slider-title">Похожие товары</h3>
+
+    <div class="slider-pagination js-adaptive-arrows">
+      <button class="arrow slider-pagination__arrow js-slider-pagination__arrow--prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="24" viewBox="0 0 38 24" fill="none">
+          <path d="M9.57 5.92993L3.5 11.9999L9.57 18.0699" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M37 12H4" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <div class="slider-pagination__page"></div>
+      <button class="arrow arrow--right slider-pagination__arrow js-slider-pagination__arrow--next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="24" viewBox="0 0 38 24" fill="none">
+          <path d="M28.43 18.0701L34.5 12.0001L28.43 5.93007" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M1 12L34 12" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="swiper js-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide card">
+        <div class="card__top" style="background-image: url('img/bg-black.jpg');">
+          <img src="img/product-3.png" alt="" class="card__img">
+        </div>
+
+        <div class="card__bottom">
+          <a href="#" class="card__title anim-slider-name">Наггетсы из курицы</a>
+        </div>
+      </div>
+      <div class="swiper-slide card">
+        <div class="card__top" style="background-image: url('img/bg-black.jpg');">
+          <img src="img/product-2.png" alt="" class="card__img">
+        </div>
+
+        <div class="card__bottom">
+          <a href="#" class="card__title anim-slider-name">Наггетсы из курицы</a>
+        </div>
+      </div>
+      <div class="swiper-slide card">
+        <div class="card__top" style="background-image: url('img/bg-black.jpg');">
+          <img src="img/product-1.png" alt="" class="card__img">
+        </div>
+
+        <div class="card__bottom">
+          <a href="#" class="card__title anim-slider-name">Наггетсы из курицы</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide card">
+        <div class="card__top" style="background-image: url('img/bg-black.jpg');">
+          <img src="img/product-3.png" alt="" class="card__img">
+        </div>
+
+        <div class="card__bottom">
+          <a href="#" class="card__title anim-slider-name">Наггетсы из курицы</a>
+        </div>
+      </div>
+      <div class="swiper-slide card">
+        <div class="card__top" style="background-image: url('img/bg-black.jpg');">
+          <img src="img/product-2.png" alt="" class="card__img">
+        </div>
+
+        <div class="card__bottom">
+          <a href="#" class="card__title anim-slider-name">Наггетсы из курицы</a>
+        </div>
+      </div>
+      <div class="swiper-slide card">
+        <div class="card__top" style="background-image: url('img/bg-black.jpg');">
+          <img src="img/product-1.png" alt="" class="card__img">
+        </div>
+
+        <div class="card__bottom">
+          <a href="#" class="card__title anim-slider-name">Наггетсы из курицы</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide card">
+        <div class="card__top" style="background-image: url('img/bg-black.jpg');">
+          <img src="img/product-3.png" alt="" class="card__img">
+        </div>
+
+        <div class="card__bottom">
+          <a href="#" class="card__title anim-slider-name">Наггетсы из курицы</a>
+        </div>
+      </div>
+      <div class="swiper-slide card">
+        <div class="card__top" style="background-image: url('img/bg-black.jpg');">
+          <img src="img/product-2.png" alt="" class="card__img">
+        </div>
+
+        <div class="card__bottom">
+          <a href="#" class="card__title anim-slider-name">Наггетсы из курицы</a>
+        </div>
+      </div>
+      <div class="swiper-slide card">
+        <div class="card__top" style="background-image: url('img/bg-black.jpg');">
+          <img src="img/product-1.png" alt="" class="card__img">
+        </div>
+
+        <div class="card__bottom">
+          <a href="#" class="card__title anim-slider-name">Наггетсы из курицы</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide card">
+        <div class="card__top" style="background-image: url('img/bg-black.jpg');">
+          <img src="img/product-3.png" alt="" class="card__img">
+        </div>
+
+        <div class="card__bottom">
+          <a href="#" class="card__title anim-slider-name">Наггетсы из курицы</a>
+        </div>
+      </div>
+      <div class="swiper-slide card">
+        <div class="card__top" style="background-image: url('img/bg-black.jpg');">
+          <img src="img/product-2.png" alt="" class="card__img">
+        </div>
+
+        <div class="card__bottom">
+          <a href="#" class="card__title anim-slider-name">Наггетсы из курицы</a>
+        </div>
+      </div>
+      <div class="swiper-slide card">
+        <div class="card__top" style="background-image: url('img/bg-black.jpg');">
+          <img src="img/product-1.png" alt="" class="card__img">
+        </div>
+
+        <div class="card__bottom">
+          <a href="#" class="card__title anim-slider-name">Наггетсы из курицы</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

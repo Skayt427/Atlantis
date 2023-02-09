@@ -59,7 +59,7 @@ body {
   padding: 0 30px;
   margin: 0 auto;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     padding: 0 15px;
   }
 }
@@ -146,6 +146,40 @@ body {
 }
 
 // Анимации
+.anim-btn-blur {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -60px;
+    height: 100%;
+    width: 60px;
+    animation-name: blur;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0));
+  }
+}
+
+@keyframes blur {
+  0% {
+    left: -60px;
+  }
+
+  12% {
+    left: calc(100% + 60px);
+  }
+
+  100% {
+    left: calc(100% + 60px);
+  }
+}
+
 .anim-scale-circle {
   position: relative;
 
@@ -288,8 +322,15 @@ body {
 }
 
 .anim-big-circle {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
   &__wrapper {
     position: relative;
+    z-index: 3;
+    color: #fff;
 
     &::before,
     &::after {
@@ -299,16 +340,34 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
       background-color: $color-blue;
+      border-radius: 50%;
+      transition: all linear 0.4s;
     }
 
     &::before {
+      z-index: -2;
       width: 100%;
       padding-bottom: 100%;
+      opacity: 0.6;
     }
 
     &::after {
-      width: 90%;
-      padding-bottom: 100%;
+      z-index: -1;
+      width: 85%;
+      padding-bottom: 85%;
+    }
+  }
+
+  &:hover {
+    .anim-big-circle__wrapper {
+
+      &::before {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) scale(1.3);
+      }
     }
   }
 }
