@@ -1066,6 +1066,189 @@ body {
           transform: translate(-50%, -50%) scale(1.2);
 }
 
+.parallax .banner__circles-wrap {
+  padding-bottom: 100%;
+}
+
+.parallax__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.parallax__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax__item {
+  position: absolute;
+}
+
+.parallax__item:nth-of-type(1) {
+  z-index: 2;
+  top: 9%;
+  left: 28%;
+  width: 294px;
+  height: 260px;
+}
+
+.parallax__item:nth-of-type(1) .parallax__img {
+  -webkit-transform: rotate(140deg);
+      -ms-transform: rotate(140deg);
+          transform: rotate(140deg);
+}
+
+.parallax__item:nth-of-type(2) {
+  top: 32%;
+  left: 1%;
+  width: 222px;
+  height: 235px;
+}
+
+.parallax__item:nth-of-type(2) .parallax__img {
+  -webkit-transform: rotate(35deg);
+      -ms-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.parallax__item:nth-of-type(3) {
+  top: 25%;
+  left: 27%;
+  width: 280px;
+  height: 260px;
+}
+
+.parallax__item:nth-of-type(3) .parallax__img {
+  -webkit-transform: rotate(-40deg);
+      -ms-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+.parallax__item:nth-of-type(4) {
+  top: 27%;
+  left: 45%;
+  width: 305px;
+  height: 329px;
+}
+
+.parallax__item:nth-of-type(4) .parallax__img {
+  -webkit-transform: rotate(-86deg);
+      -ms-transform: rotate(-86deg);
+          transform: rotate(-86deg);
+}
+
+.parallax__item:nth-of-type(5) {
+  z-index: 2;
+  top: 34%;
+  left: 61%;
+  width: 260px;
+  height: 293px;
+}
+
+.parallax__item:nth-of-type(5) .parallax__img {
+  -webkit-transform: rotate(-64deg);
+      -ms-transform: rotate(-64deg);
+          transform: rotate(-64deg);
+}
+
+.parallax__item:nth-of-type(6) {
+  top: 33%;
+  left: 82%;
+  width: 200px;
+  height: 200px;
+}
+
+.parallax__item:nth-of-type(6) .parallax__img {
+  -webkit-transform: rotate(-153deg);
+      -ms-transform: rotate(-153deg);
+          transform: rotate(-153deg);
+}
+
+.parallax__item:nth-of-type(7) {
+  top: 56%;
+  left: -5%;
+  width: 270px;
+  height: 270px;
+}
+
+.parallax__item:nth-of-type(7) .parallax__img {
+  -webkit-transform: rotate(-33deg);
+      -ms-transform: rotate(-33deg);
+          transform: rotate(-33deg);
+}
+
+.parallax__item:nth-of-type(8) {
+  top: 53%;
+  left: 32%;
+  width: 150px;
+  height: 150px;
+}
+
+.parallax__item:nth-of-type(8) .parallax__img {
+  -webkit-transform: rotate(15deg);
+      -ms-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+.parallax__item:nth-of-type(9) {
+  top: 70%;
+  left: 16%;
+  width: 270px;
+  height: 300px;
+}
+
+.parallax__item:nth-of-type(9) .parallax__img {
+  -webkit-transform: rotate(-56deg);
+      -ms-transform: rotate(-56deg);
+          transform: rotate(-56deg);
+}
+
+.parallax__item:nth-of-type(10) {
+  z-index: 3;
+  top: 65%;
+  left: 46%;
+  width: 326px;
+  height: 260px;
+}
+
+.parallax__item:nth-of-type(10) .parallax__img {
+  -webkit-transform: rotate(-12deg);
+      -ms-transform: rotate(-12deg);
+          transform: rotate(-12deg);
+}
+
+.parallax__item:nth-of-type(11) {
+  top: 76%;
+  left: 78%;
+  width: 130px;
+  height: 130px;
+}
+
+.parallax__item:nth-of-type(11) .parallax__img {
+  -webkit-transform: rotate(16deg);
+      -ms-transform: rotate(16deg);
+          transform: rotate(16deg);
+}
+
+.parallax__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
 .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3082,6 +3265,74 @@ body {
   }
 }
 
+@media (max-width: 1500px) {
+  .parallax__item:nth-of-type(1) .parallax__img {
+    -webkit-transform: rotate(140deg) scale(0.7);
+        -ms-transform: rotate(140deg) scale(0.7);
+            transform: rotate(140deg) scale(0.7);
+  }
+
+  .parallax__item:nth-of-type(2) .parallax__img {
+    -webkit-transform: rotate(35deg) scale(0.7);
+        -ms-transform: rotate(35deg) scale(0.7);
+            transform: rotate(35deg) scale(0.7);
+  }
+
+  .parallax__item:nth-of-type(3) .parallax__img {
+    -webkit-transform: rotate(-40deg) scale(0.7);
+        -ms-transform: rotate(-40deg) scale(0.7);
+            transform: rotate(-40deg) scale(0.7);
+  }
+
+  .parallax__item:nth-of-type(4) .parallax__img {
+    -webkit-transform: rotate(-86deg) scale(0.7);
+        -ms-transform: rotate(-86deg) scale(0.7);
+            transform: rotate(-86deg) scale(0.7);
+  }
+
+  .parallax__item:nth-of-type(5) .parallax__img {
+    -webkit-transform: rotate(-64deg) scale(0.7);
+        -ms-transform: rotate(-64deg) scale(0.7);
+            transform: rotate(-64deg) scale(0.7);
+  }
+
+  .parallax__item:nth-of-type(6) .parallax__img {
+    -webkit-transform: rotate(-153deg) scale(0.7);
+        -ms-transform: rotate(-153deg) scale(0.7);
+            transform: rotate(-153deg) scale(0.7);
+  }
+
+  .parallax__item:nth-of-type(7) .parallax__img {
+    -webkit-transform: rotate(-33deg) scale(0.7);
+        -ms-transform: rotate(-33deg) scale(0.7);
+            transform: rotate(-33deg) scale(0.7);
+  }
+
+  .parallax__item:nth-of-type(8) .parallax__img {
+    -webkit-transform: rotate(15deg) scale(0.7);
+        -ms-transform: rotate(15deg) scale(0.7);
+            transform: rotate(15deg) scale(0.7);
+  }
+
+  .parallax__item:nth-of-type(9) .parallax__img {
+    -webkit-transform: rotate(-56deg) scale(0.7);
+        -ms-transform: rotate(-56deg) scale(0.7);
+            transform: rotate(-56deg) scale(0.7);
+  }
+
+  .parallax__item:nth-of-type(10) .parallax__img {
+    -webkit-transform: rotate(-12deg) scale(0.7);
+        -ms-transform: rotate(-12deg) scale(0.7);
+            transform: rotate(-12deg) scale(0.7);
+  }
+
+  .parallax__item:nth-of-type(11) .parallax__img {
+    -webkit-transform: rotate(16deg) scale(0.7);
+        -ms-transform: rotate(16deg) scale(0.7);
+            transform: rotate(16deg) scale(0.7);
+  }
+}
+
 @media (max-width: 1440px) {
   .container-full {
     padding: 32px 15px 15px;
@@ -3708,6 +3959,31 @@ body {
     width: 100%;
   }
 
+  .parallax__item:nth-of-type(5),
+  .parallax__item:nth-of-type(9),
+  .parallax__item:nth-of-type(11) {
+    display: none;
+  }
+
+  .parallax__item:nth-of-type(3) {
+    left: 34%;
+  }
+
+  .parallax__item:nth-of-type(6) {
+    top: 47%;
+    left: 68%;
+  }
+
+  .parallax__item:nth-of-type(2) {
+    top: 32%;
+    left: 12%;
+  }
+
+  .parallax__item:nth-of-type(7) {
+    top: 56%;
+    left: 30%;
+  }
+
   .info__circle {
     display: none;
   }
@@ -4057,6 +4333,32 @@ body {
   .companions__item {
     width: 70px;
     height: 70px;
+  }
+}
+
+@media (max-width: 560px) {
+  .parallax__item:nth-of-type(6),
+  .parallax__item:nth-of-type(3),
+  .parallax__item:nth-of-type(8),
+  .parallax__item:nth-of-type(10) {
+    display: none;
+  }
+
+  .parallax__item:nth-of-type(9) {
+    display: block;
+    top: 0%;
+    left: 0%;
+  }
+
+  .parallax__item:nth-of-type(7) {
+    top: 56%;
+    left: 0%;
+  }
+
+  .parallax__item:nth-of-type(1) {
+    z-index: 2;
+    top: -4%;
+    left: 38%;
   }
 }
 

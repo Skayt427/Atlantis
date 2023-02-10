@@ -262,6 +262,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
+  // parallax
+  if (document.querySelector('.parallax__item') && window.innerWidth > 1024) {
+    document.addEventListener("mousemove", parallax);
+    function parallax(event) {
+      this.querySelectorAll(".parallax__item").forEach((shift) => {
+        const position = shift.getAttribute("value");
+        const x = (window.innerWidth - event.pageX * position) / 90;
+        const y = (window.innerHeight - event.pageY * position) / 90;
+
+        shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+      });
+    };
+  };
+
   // Прикрепление файла
   // Прикрепление файла
   let msgInput = document.querySelectorAll('.pin__input');
