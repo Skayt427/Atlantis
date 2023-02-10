@@ -16,18 +16,59 @@
 <body>
   <div class="wrapper">
     <div class="content">
-      <header class="header container">
-        <a href="" class="logo header__logo anim-opacity">
-          <img src="img/logo.svg" class="logo__img" alt="atlantis">
-        </a>
+      <header class="header">
+        <div class="header__box container">
+          <a href="" class="logo header__logo anim-opacity">
+            <img src="img/logo.svg" class="logo__img" alt="atlantis">
+          </a>
 
-        <nav class="header__wrapper">
-          <ul class="menu">
-            <li class="menu__item"><a href="/" class="menu__link">Каталог</a></li>
-            <li class="menu__item"><a href="/vacancy.html" class="menu__link">Вакансии</a></li>
-            <li class="menu__item"><a href="/contacts.html" class="menu__link">Контакты</a></li>
-          </ul>
-        </nav>
+          <nav class="header__wrapper">
+            <ul class="menu">
+              <li class="menu__item">
+                <div class="menu__link">
+                  Каталог
+
+                  <div class="submenu">
+                    <ul class="submenu__list container">
+                      <li class="submenu__item">
+                        <a href="#" class="submenu__link">
+                          <img src="img/test-info-1.png" alt="" class="submenu__img">
+                          <div class="submenu__name">Полуфабракты из курицы</div>
+                        </a>
+                      </li>
+                      <li class="submenu__item">
+                        <a href="#" class="submenu__link">
+                          <img src="img/test-info-2.png" alt="" class="submenu__img">
+                          <div class="submenu__name">Полуфабракты из рыбы и морепродуктов</div>
+                        </a>
+                      </li>
+                      <li class="submenu__item">
+                        <a href="#" class="submenu__link">
+                          <img src="img/test-info-3.png" alt="" class="submenu__img">
+                          <div class="submenu__name">Сыр моцарелла и полуфабрикаты из него</div>
+                        </a>
+                      </li>
+                      <li class="submenu__item">
+                        <a href="#" class="submenu__link">
+                          <img src="img/test-info-4.png" alt="" class="submenu__img">
+                          <div class="submenu__name">Панировочные сухари и смеси</div>
+                        </a>
+                      </li>
+                      <li class="submenu__item">
+                        <a href="#" class="submenu__link">
+                          <img src="img/test-info-5.png" alt="" class="submenu__img">
+                          <div class="submenu__name">Мука пшеничная и отруби</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item"><a href="/vacancy.html" class="menu__link">Вакансии</a></li>
+              <li class="menu__item"><a href="/contacts.html" class="menu__link">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main class="main">
@@ -167,11 +208,21 @@
             <textarea class="textarea" placeholder="ВВЕДИТЕ ТЕКСТ"></textarea>
           </label>
 
-          <button class="modal__submit" type="submit">Отправить</button>
+          <div class="agreement">
+            <input type="checkbox" id="agreement" class="agreement__checkbox">
+            <label for="agreement" class="agreement__label">
+              <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.4352 0.292893C14.8257 -0.0976311 15.4589 -0.097631 15.8494 0.292893C16.2399 0.683418 16.2399 1.31658 15.8494 1.70711L5.94989 11.6066C5.55936 11.9971 4.9262 11.9971 4.53567 11.6066C4.52955 11.6005 4.52353 11.5943 4.5176 11.5881L0.292893 7.36336C-0.097631 6.97283 -0.0976311 6.33967 0.292893 5.94914C0.683417 5.55862 1.31658 5.55862 1.70711 5.94914L5.24301 9.48505L14.4352 0.292893Z" fill="white" />
+              </svg>
+            </label>
 
-          <div class="modal__subtext">
-            Я прочитал и принимаю условия Соглашения об обработке персональных данных
+            <div class="agreement__text">
+              Я прочитал и принимаю условия
+              <a href="#">Соглашения об обработке персональных данных</a>
+            </div>
           </div>
+
+          <button class="modal__submit" type="submit">Отправить</button>
         </form>
       </div>
     </div>

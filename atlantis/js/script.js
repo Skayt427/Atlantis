@@ -23,8 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesPerView: 1,
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 4000,
     },
+    speed: 700,
   });
 
   let sliders = document.querySelectorAll('.js-slider');
@@ -68,6 +69,27 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       });
     });
+  };
+
+  // Отрытие меню в шапке на мобильных
+  let menuBtns = document.querySelectorAll('.menu__link');
+  if (menuBtns.length) {
+    function resizeHeader() {
+      menuBtns.forEach(menuBtn => {
+        if (window.innerWidth <= 1024) {
+          menuBtn.addEventListener('click', function () {
+            this.classList.toggle('active');
+          });
+        } else {
+          if (menuBtn.classList.contains('active')) {
+            menuBtn.classList.remove('active');
+          };
+        };
+      });
+    };
+
+    resizeHeader();
+    window.addEventListener('resize', resizeHeader);
   };
 
   // Перенос адаптивных стрелок слайдеров
