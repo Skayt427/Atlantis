@@ -28,6 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
     speed: 700,
   });
 
+  new Swiper('.js-catalog-slider', {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+    },
+    speed: 700,
+  });
+
   let sliders = document.querySelectorAll('.js-slider');
 
   if (sliders.length) {
@@ -704,5 +713,79 @@ document.addEventListener("DOMContentLoaded", function () {
     y: 150,
     opacity: 0,
   });
+
+  // catalog
+  gsap.from('.anim-desc-left', {
+    scrollTrigger: {
+      trigger: '.description',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    x: -2000,
+  });
+
+  gsap.from('.anim-desc-right', {
+    scrollTrigger: {
+      trigger: '.description',
+      toggleActions: 'play pause resume none',
+    },
+    duration: 1,
+    y: 450,
+    opacity: 0,
+  });
+
+  let catalogItem = document.querySelectorAll('.anim-catalog-item');
+
+  if (catalogItem.length && window.innerWidth >= 760) {
+    catalogItem.forEach((item, index) => {
+      let title = item.querySelector('.anim-catalog-title');
+      let text = item.querySelector('.anim-catalog-text');
+      let btn = item.querySelector('.anim-catalog-btn');
+
+
+      if (index % 2) {
+        gsap.from(title, {
+          scrollTrigger: {
+            trigger: item,
+            toggleActions: 'play pause resume none',
+          },
+          duration: 1,
+          x: 2000,
+        });
+      } else {
+        gsap.from(title, {
+          scrollTrigger: {
+            trigger: item,
+            toggleActions: 'play pause resume none',
+          },
+          duration: 1,
+          x: -2000,
+        });
+      };
+
+
+      gsap.from(text, {
+        scrollTrigger: {
+          trigger: item,
+          toggleActions: 'play pause resume none',
+        },
+        duration: 1,
+        delay: 0.5,
+        opacity: 0,
+        y: 100,
+      });
+
+      gsap.from(btn, {
+        scrollTrigger: {
+          trigger: item,
+          toggleActions: 'play pause resume none',
+        },
+        duration: 1,
+        delay: 0.5,
+        opacity: 0,
+        y: 100,
+      });
+    });
+  };
 });
 
